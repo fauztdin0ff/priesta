@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preload" href="fonts/RobotoFlex-Variable.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="css/nouislider.min.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/lightgallery.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/style.css?_v=20240331145827">
+   <title>Главная</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="header__body container">
+      <div class="header__menus">
+         <div class="header__search">
+            <div class="header__search-icon">
+               <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="svgicons/sprite.svg#search"></use>
+               </svg>
+            </div>
+            <div class="header__search-body">
+               <form action="/search" method="">
+                  <input type="text" id="searchQuery" name="" placeholder="Найти..." required>
+                  <button type="">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#close-icon"></use>
+                     </svg>
+                  </button>
+               </form>
+            </div>
+         </div>
+         <div class="header__menu menu">
+            <div class="menu__icon">
+               <span></span>
+            </div>
+            <div class="menu__body">
+               <div class="header-mobile"></div>
+               <nav class="menu__nav">
+                  <ul class="menu__list">
+                     <li><a href="catalog.html" class="menu__link" id="openHeaderCatalog">Каталог</a>
+                        <div class="mobile-catalog-items"></div>
+                     </li>
+                     <li><a href="lookbooks.html" class="menu__link" id="openLookbooks">Lookbooks
+                           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                 <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                              </svg></span>
+                        </a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="header__logo">
+         <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="99" height="30" viewBox="0 0 99 30">
+               <use xlink:href="svgicons/sprite.svg#logo"></use>
+            </svg>
+         </a>
+      </div>
+      <div class="header__buttons">
+         <div class="header__buttons-account account authorized">
+            <!--когда авторизовались добавляется класс authorized-->
+            <div class="account__button">
+               <a href="cabinet.html">
+                  <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="person-icon">
+                     <use xlink:href="svgicons/sprite.svg#person"></use>
+                  </svg>
+                  <svg width="25" height="28" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="person-solid-icon">
+                     <use xlink:href="svgicons/sprite.svg#person-solid"></use>
+                  </svg>
+                  <span class="account-button-text">Аккаунт</span>
+               </a>
+            </div>
+            <div class="account__popup">
+               <div class="step-1">
+                  <div class="account__title">Войти</div>
+                  <div class="account__subtitle">
+                     <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#mail-icon"></use>
+                     </svg>
+                     <p>На ваш e-mail будет отправлен код подтверждения</p>
+                  </div>
+                  <form action="">
+                     <input type="mail" name="" id="" class="input" placeholder="E-mail">
+                     <button type="submit" class="black-link">Продолжить
+                        <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                        </svg>
+                     </button>
+                  </form>
+                  <div class="checkbox-container">
+                     <input type="checkbox" id="policyCheckbox" checked>
+                     <label for="policyCheckbox" class="popup__checkbox"></label>
+                     <label for="policyCheckbox">Нажимая на кнопку “Продолжить” я соглашаюсь с
+                        <a href="policy.html">Политикой конфиденциальности и Правилами обработки персональных данных</a>
+                     </label>
+                  </div>
+               </div>
+               <div class="step-2" style="display: none;">
+                  <div class="account__title">Войти</div>
+                  <div class="account__subtitle">
+                     <p>Введите код из сообщения</p>
+                  </div>
+                  <div class="account-mail-code">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                  </div>
+                  <a href="" class="black-link">Войти
+                     <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="header__buttons-wishlist">
+            <a href="wishlist.html" title="Избранное">
+               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="heart-icon">
+                  <use xlink:href="svgicons/sprite.svg#heart"></use>
+               </svg>
+               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="heart-solid-icon">
+                  <use xlink:href="svgicons/sprite.svg#heart-solid"></use>
+               </svg>
+            </a>
+            <!--Кружок при наличии товаров внутри-->
+            <span class="quantity-circle">2</span>
+         </div>
+         <div class="header__buttons-cart">
+            <a href="cart.html" title="Корзина">
+               <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="bag-icon">
+                  <use xlink:href="svgicons/sprite.svg#bag"></use>
+               </svg>
+               <svg width="22" height="26" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="bag-solid-icon">
+                  <use xlink:href="svgicons/sprite.svg#bag-solid"></use>
+               </svg>
+            </a>
+            <!--Кружок при наличии товаров внутри-->
+            <span class="quantity-circle">5</span>
+         </div>
+      </div>
+   </div>
+   <div class="header__catalog catalog-header">
+      <div class="catalog-header__menu">
+         <ul class="catalog-header__list">
+            <li>
+               <a href="catalog.html" class="catalog-header__link">Смотреть все
+               </a>
+            </li>
+            <li>
+               <a href="catalog.html" class="catalog-header__link active">Новинки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content show">
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="catalog.html" class="catalog-header__link">Верхняя одежда
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Жакеты
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Брюки & Шорты
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Топы & Футболки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Платья
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Юбки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Рубашки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</header>
+      <main>
+         <section class="contacts">
+            <div class="contacts__body container" style="border-bottom: 1px solid #D6D6D6;padding-bottom: 60px;">
+
+               <div class="breadcrumbs">
+                  <a href="index.html">Главная</a>
+                  <span>/</span>
+                  <p>Возврат</p>
+               </div>
+
+               <div class="contacts__title">
+                  <h1>Возврат</h1>
+               </div>
+               <div class="return__content text-content">
+                  <div class="text-content__subtitle">
+                     <p>ЕСЛИ НЕОБХОДИМО ВЕРНУТЬ ТОВАР, КОТОРЫЙ ВЫ ПРИОБРЕЛИ В ИНТЕРНЕТ-МАГАЗИНЕ PRIESTA.RU,
+                        ВОСПОЛЬЗУЙТЕСЬ НАИБОЛЕЕ УДОБНЫМ ДЛЯ ВАС СПОСОБОМ:</p>
+                  </div>
+                  <ul class="text-content__list">
+                     <li>Вы можете вернуть изделие надлежащего качества в течение 7 дней с момента получения заказа при
+                        покупке в интернет-магазине</li>
+                     <li>Если вещь не подошла вам по размеру, цвету, фасону или форме, вы так же можете вернуть ее в
+                        течение 14 дней с момента покупки в нашем магазине.</li>
+                     <li>Возврат изделия надлежащего качества проводится, если вещь не была в употреблении, сохранены ее
+                        товарный вид, потребительские свойства, фабричные ярлыки, а также документ, подтверждающий факт
+                        и условия покупки указанного товара. Отсутствие у потребителя документа, подтверждающего факт и
+                        условия покупки товара, не лишает его возможности ссылаться на другие доказательства
+                        приобретения товара у данного продавца. </li>
+                     <li>При возврате в интернет-магазин обработка занимает до 5 рабочих дней с момента получения
+                        возвратной посылки. После обработки вашего возврата денежные средства возвращаются на карту, с
+                        которой был оплачен заказ на сайте. Срок зачисления денежных средств зависит от Банка-эмитента.
+                     </li>
+                  </ul>
+                  <p style="margin-bottom: 30px;">Интернет-магазин имеет право отказать в возврате в случаях обнаружения
+                     нарушений условий сохранения
+                     товарного вида, в таком случае все затраты на доставку возврата возлагаются на потребителя.</p>
+                  <div class="text-content__subtitle">
+                     <p>УСЛОВИЯ ВОЗВРАТА</p>
+                  </div>
+                  <ul class="text-content__list">
+                     <li>Возврат осуществляется при условии сохранения товарного вида вещи в течение 7 дней с момента
+                        получения вами заказа.</li>
+                     <li>Для оформления возврата заполните заявление, приложенное к вашему заказу. Если бланк не
+                        сохранен, вы можете заполнить онлайн-форму возврата на сайте.</li>
+                  </ul>
+                  <div class="text-content__subtitle">
+                     <p style="margin-bottom: 15px;">Как вернуть?</p>
+                  </div>
+                  <p><b>Транспортной компанией</b></p>
+                  <ul class="text-content__list">
+                     <li>Покупатель самостоятельно отправляет возврат курьерской службой СДЭК, по адресу: г.
+                        Санкт-Петербург, Пункт СДЭК SPB101, пр-т Просвещения, 20/25, контактный номер телефона
+                        +79174131313.</li>
+                  </ul>
+                  <p style="margin-bottom: 15px;"><b>Экспресс-возврат курьером до двери</b></p>
+                  <ul class="text-content__list">
+                     <li>Возврат по Санкт-Петербургу осуществляется службой доставки Яндекс Go (расчет по тарифам Яндекс
+                        Go ) покупатель самостоятельно осуществляет возврат через Яндекс-доставку, по адресу: г.
+                        Санкт-Петербург, пр-т Просвещения, 15.</li>
+                  </ul>
+                  <p>Все транспортные расходы за возврат заказа оплачивает покупатель, за исключением случаев
+                     производственного брака, в этом случае транспортные расходы будут возмещены покупателю продавцом.
+                     Стоимость доставки возврата покупатель оплачивает сразу при отправке.</p>
+               </div>
+            </div>
+            <div class="return__body container">
+               <div class="return__form-info">
+                  <p><b>Для оформления обмена или возврата вы можете связаться с нашей службой поддержки клиентов.</b>
+                  </p>
+                  <p>Контакты для связи с магазином по вопросам обмена или возврата товаров:</p>
+                  <p class="return__form-contacts">
+                  <p><span>Email:</span> info@priesta.ru</p>
+                  <p><span>WhatsApp:</span> +79174131313</p>
+                  </p>
+               </div>
+               <div class="return__form-title">оформить возврат</div>
+               <div class="tab-cabinet__content tab3">
+                  <form action="">
+                     <label for="">ИМЯ: <span>*</span></label><br>
+                     <input type="text" id="" name="" value="Иван" required><br>
+                     <label for="">ТЕЛЕФОН: <span>*</span></label><br>
+                     <input type="tel" id="" name="" value="+7 (918) 123-45-67" required><br>
+                     <label for="">ПОЧТА: <span>*</span></label><br>
+                     <input type="mail" id="" name="" value="ivanov90@gmail.com" required><br>
+                     <label for="">НОМЕР ЗАКАЗА: <span>*</span></label><br>
+                     <input type="mail" id="" name="" value="ivanov90@gmail.com" required><br>
+                     <label for="apartment">поделитесь с нами причиной возврата: <span>*</span></label><br>
+                     <textarea name="" id="" cols="30" rows="6" required></textarea><br>
+                     <div class="form-checkox-buttons">
+                        <div class="checkbox-container">
+                           <input type="checkbox" id="policyCheckbox2" checked>
+                           <label for="policyCheckbox2" class="popup__checkbox"></label>
+                           <label for="policyCheckbox2">Настоящим подтверждаю, что я ознакомлен и согласен с условиями
+                              <a href="">оферты</a> и <a href="">политики конфиденциальности</a></label>
+                        </div>
+                        <button type="submit" class="black-link">Отправить
+                           <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                           </svg>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <div class="whatsapp-button">
+            <img src="svgicons/whatsapp.svg" alt="whatsapp">
+         </div>
+      </main>
+      <footer class="footer">
+   <div class="footer__body">
+      <div class="footer__left">
+         <div class="footer__languages">
+            <a href="">English version</a>
+         </div>
+         <div class="main-footer__logo">
+            <a href="index.html">
+               <svg xmlns="http://www.w3.org/2000/svg" width="99" height="30" viewBox="0 0 99 30">
+                  <use xlink:href="svgicons/sprite.svg#logo"></use>
+               </svg>
+            </a>
+         </div>
+      </div>
+      <div class="footer__main main-footer">
+
+         <div class="main-footer__menu">
+            <nav class="main-footer__links">
+               <div class="main-footer__column">
+                  <a href="about.html" class="main-footer__link">About the brand</a>
+                  <a href="" class="main-footer__link">Instagram</a>
+                  <a href="" class="main-footer__link">Магазины</a>
+                  <a href="contacts.html" class="main-footer__link">Контакты</a>
+               </div>
+               <div class="main-footer__column">
+                  <a href="pay.html" class="main-footer__link">Оплата</a>
+                  <a href="delivery.html" class="main-footer__link">Доставка</a>
+                  <a href="return-rules.html" class="main-footer__link">Правила возврата</a>
+                  <a href="return-form.html" class="main-footer__link">Форма возврата</a>
+               </div>
+               <div class="main-footer__column">
+                  <a href="" class="main-footer__link">Оферта</a>
+                  <a href="" class="main-footer__link">Пользовательское соглашение</a>
+                  <a href="policy.html" class="main-footer__link">Политика обработки персональных данных</a>
+               </div>
+            </nav>
+            <div class="main-footer__policy">© 2024 PRIESTA | Все права защищены</div>
+         </div>
+         <div class="main-footer__subscribe subscribe">
+            <div class="subscribe__title">Подписывайтесь на наши новости</div>
+            <form action="" class="subscribe__form">
+               <input type="mail" class="input" placeholder="ВАШ EMAIL">
+               <button type="submit">
+                  <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </form>
+            <div class="checkbox-container">
+               <input type="checkbox" id="policyCheckbox2" checked>
+               <label for="policyCheckbox2" class="popup__checkbox"></label>
+               <label for="policyCheckbox2">Нажимая на кнопку “Продолжить” вы соглашаетесь с <a
+                     href="policy.html">Политикой
+                     обработки персональных данных</a>
+               </label>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+   </div>
+   <script src="js/app.js?_v=20240331145827"></script>
+</body>
+
+</html>

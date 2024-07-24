@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preload" href="fonts/RobotoFlex-Variable.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="css/nouislider.min.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/lightgallery.css?_v=20240331145827">
+   <link rel="stylesheet" href="css/style.css?_v=20240331145827">
+   <title>Главная</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="header__body container">
+      <div class="header__menus">
+         <div class="header__search">
+            <div class="header__search-icon">
+               <svg width="24" height="25" viewBox="0 0 24 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="svgicons/sprite.svg#search"></use>
+               </svg>
+            </div>
+            <div class="header__search-body">
+               <form action="/search" method="">
+                  <input type="text" id="searchQuery" name="" placeholder="Найти..." required>
+                  <button type="">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#close-icon"></use>
+                     </svg>
+                  </button>
+               </form>
+            </div>
+         </div>
+         <div class="header__menu menu">
+            <div class="menu__icon">
+               <span></span>
+            </div>
+            <div class="menu__body">
+               <div class="header-mobile"></div>
+               <nav class="menu__nav">
+                  <ul class="menu__list">
+                     <li><a href="catalog.html" class="menu__link" id="openHeaderCatalog">Каталог</a>
+                        <div class="mobile-catalog-items"></div>
+                     </li>
+                     <li><a href="lookbooks.html" class="menu__link" id="openLookbooks">Lookbooks
+                           <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                 <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                              </svg></span>
+                        </a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="header__logo">
+         <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="99" height="30" viewBox="0 0 99 30">
+               <use xlink:href="svgicons/sprite.svg#logo"></use>
+            </svg>
+         </a>
+      </div>
+      <div class="header__buttons">
+         <div class="header__buttons-account account authorized">
+            <!--когда авторизовались добавляется класс authorized-->
+            <div class="account__button">
+               <a href="cabinet.html">
+                  <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="person-icon">
+                     <use xlink:href="svgicons/sprite.svg#person"></use>
+                  </svg>
+                  <svg width="25" height="28" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="person-solid-icon">
+                     <use xlink:href="svgicons/sprite.svg#person-solid"></use>
+                  </svg>
+                  <span class="account-button-text">Аккаунт</span>
+               </a>
+            </div>
+            <div class="account__popup">
+               <div class="step-1">
+                  <div class="account__title">Войти</div>
+                  <div class="account__subtitle">
+                     <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#mail-icon"></use>
+                     </svg>
+                     <p>На ваш e-mail будет отправлен код подтверждения</p>
+                  </div>
+                  <form action="">
+                     <input type="mail" name="" id="" class="input" placeholder="E-mail">
+                     <button type="submit" class="black-link">Продолжить
+                        <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                           xmlns="http://www.w3.org/2000/svg">
+                           <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                        </svg>
+                     </button>
+                  </form>
+                  <div class="checkbox-container">
+                     <input type="checkbox" id="policyCheckbox" checked>
+                     <label for="policyCheckbox" class="popup__checkbox"></label>
+                     <label for="policyCheckbox">Нажимая на кнопку “Продолжить” я соглашаюсь с
+                        <a href="policy.html">Политикой конфиденциальности и Правилами обработки персональных данных</a>
+                     </label>
+                  </div>
+               </div>
+               <div class="step-2" style="display: none;">
+                  <div class="account__title">Войти</div>
+                  <div class="account__subtitle">
+                     <p>Введите код из сообщения</p>
+                  </div>
+                  <div class="account-mail-code">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                     <input type="text" class="digit-input" maxlength="1">
+                  </div>
+                  <a href="" class="black-link">Войти
+                     <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="header__buttons-wishlist">
+            <a href="wishlist.html" title="Избранное">
+               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="heart-icon">
+                  <use xlink:href="svgicons/sprite.svg#heart"></use>
+               </svg>
+               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="heart-solid-icon">
+                  <use xlink:href="svgicons/sprite.svg#heart-solid"></use>
+               </svg>
+            </a>
+            <!--Кружок при наличии товаров внутри-->
+            <span class="quantity-circle">2</span>
+         </div>
+         <div class="header__buttons-cart">
+            <a href="cart.html" title="Корзина">
+               <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="bag-icon">
+                  <use xlink:href="svgicons/sprite.svg#bag"></use>
+               </svg>
+               <svg width="22" height="26" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="bag-solid-icon">
+                  <use xlink:href="svgicons/sprite.svg#bag-solid"></use>
+               </svg>
+            </a>
+            <!--Кружок при наличии товаров внутри-->
+            <span class="quantity-circle">5</span>
+         </div>
+      </div>
+   </div>
+   <div class="header__catalog catalog-header">
+      <div class="catalog-header__menu">
+         <ul class="catalog-header__list">
+            <li>
+               <a href="catalog.html" class="catalog-header__link">Смотреть все
+               </a>
+            </li>
+            <li>
+               <a href="catalog.html" class="catalog-header__link active">Новинки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content show">
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="catalog.html" class="catalog-header__link">Верхняя одежда
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="product-card.html">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Жакеты
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Брюки & Шорты
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Топы & Футболки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Платья
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Юбки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <a href="" class="catalog-header__link">Рубашки
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <use xlink:href="svgicons/sprite.svg#chevron-right"></use>
+                     </svg>
+                  </span>
+               </a>
+               <div class="catalog-header__content">
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product1.webp" type="image/webp"><img src="img/products/product1.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product2.webp" type="image/webp"><img src="img/products/product2.png" alt="product"></picture>
+                     </a>
+                  </div>
+                  <div class="catalog-header__content-item">
+                     <a href="">
+                        <picture><source srcset="img/products/product3.webp" type="image/webp"><img src="img/products/product3.png" alt="product"></picture>
+                     </a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</header>
+      <main>
+         <div class="policy">
+            <div class="policy__body container">
+               <div class="breadcrumbs">
+                  <a href="index.html">Главная</a>
+                  <span>/</span>
+                  <p>Публичная оферта</p>
+               </div>
+               <div class="policy__title">
+                  Публичная оферта интернет-магазина «PRIESTA»
+               </div>
+               <div class="policy__text">
+                  <div class="policy__text-simple">
+                     <p>ИП Смирнов С.А. именуемое в дальнейшем Продавец, предлагает Товары, размещенные в
+                        интернет-магазине http://priesta.ru/ (далее - Интернет-магазин), любому дееспособному
+                        физическому/юридическому лицу (в том числе индивидуальному предпринимателю), именуемому в
+                        дальнейшем Покупатель в случае принятия последним условий настоящего Договора и его приложений
+                        (безусловный акцепт).</p>
+                     <p>Настоящий Договор не требует двустороннего подписания и действителен в электронном виде.</p>
+                  </div>
+                  <div class="policy__text-title">термины</div>
+                  <div class="policy__text-simple">
+                     <p>В целях настоящего Договора Стороны используют указанные термины в следующем значении:</p>
+                     <p>1.1. Интернет-магазин – сайт, расположенный в сети Интернет по адресу http://priesta.ru/,
+                        посредством которого Продавец осуществляет дистанционную торговлю Товарами. <br>
+                        1.2. Товар – материальный объект, размещенный в Интернет-магазине и доступный для Заказа
+                        Покупателем. <br>
+                        1.3. Бракованный Товар – это товар, имеющий недостатки или существенные недостатки. <br>
+                        1.4. Заказ – оформленный запрос Покупателя через сайт Интернет-магазина или по телефону
+                        Интернет-магазина на приобретение и доставку Товаров, выбранных Покупателем в Интернет-магазине,
+                        по указанному Покупателем адресу.<br>
+                        1.5. Покупатель – любое физическое (юридическое) лицо или индивидуальный предприниматель,
+                        акцептовавшее(ий) настоящий Договор.<br>
+                        1.6. Продавец – Индивидуальный предприниматель Смирнов Станислав Андреевич<br>
+                        1.7. Производитель – лицо, произведшее Товар, и выдающее гарантию на Товар.<br>
+                        1.8. Акцепт Оферты (Безусловный акцепт) – в соответствии со ст. 438 ГК РФ полное и
+                        безоговорочное принятие Договора, осуществляемое путем Заказа Товара в Интернет-магазине.<br>
+                        1.9. Персональные данные – информация, относящаяся к Покупателю, в том числе указанная им при
+                        оформлении заказа, позволяющая установить личность такого Покупателя.<br>
+                        1.10. Обработка персональных данных – действия (операции), производимые в ручном или
+                        автоматическом режиме с персональными данными, включая сбор, систематизацию, накопление,
+                        хранение, уточнение (обновление, изменение), использование, распространение (в том числе
+                        передача), обезличивание, блокирование и уничтожение персональных данных.<br>
+                        1.11. Аналог собственноручной подписи – нажатие кнопки "Подтвердить заказ" при оформлении заказа
+                        на сайте Продавца, или высказывание желания приобрести товар по телефону в разговоре с
+                        менеджером (когда менеджер по телефону создает заказ от Вашего имени).<br>
+                        1.12. Пункт самовывоза – месторасположение Продавца (курьерской компании, с которой у Продавца
+                        заключен соответствующий договор), где Покупатель самостоятельно получает Заказ.<br>
+                        1.13. Менеджер Продавца – сотрудник продавца.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ПРЕДМЕТ ДОГОВОРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        2.1. Продавец обязуется передать в собственность Покупателю, а Покупатель обязуется оплатить и
+                        принять Товары, заказанные на сайте Интернет-магазина.<br>
+                        2.2. В случае несогласия Покупателя с какими-либо из положений настоящего Договора, Покупатель
+                        не вправе заказывать товар или оставлять заявки на товар через сайт или по телефону, указанному
+                        на сайте Интернет-магазина. В случае, если Продавцом были внесены какие-либо изменения в
+                        Договор, с которыми Покупатель не согласен, Покупатель обязан прекратить использование сайта
+                        Интернет-магазина.<br>
+                        2.3. В соответствии с частью 1 статьи 450 Гражданского кодекса РФ, Стороны согласовали, что
+                        Продавец имеет право в любой момент в одностороннем порядке внести изменения или дополнения в
+                        настоящий Договор. Продавец направляет оферту путем размещения новой редакции в сети Интернет на
+                        странице <a href="http://priesta.ru/">http://priesta.ru/</a>. Изменения вступают в силу на
+                        следующий календарный день после размещения новой редакции Договора.<br>
+                        2.4. Покупатель обязуется самостоятельно ознакомиться с актуальной редакцией Договора.<br>
+                        2.5. Совершая Заказ, Покупатель гарантирует, что полностью ознакомился с текстом настоящего
+                        Договора и принимает его условия. Совершение заказа после изменения Договора рассматривается
+                        Продавцом как принятие новых условий Договора.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">АКЦЕПТ (ПРИНЯТИЕ) ОФЕРТЫ</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        3.1. Текст данного Договора является публичной офертой (в соответствии со статьей 435 и частью 2
+                        статьи 437 Гражданского кодекса РФ).<br>
+                        3.2. Факт оформления Заказа является безоговорочным принятием данного Договора (безусловным
+                        акцептом), и Покупатель рассматривается как лицо, вступившее с Продавцом в договорные
+                        отношения.<br>
+                        3.3. Выражая согласие с условиями настоящего Договора Покупатель подтверждает, что действует не
+                        в интересах третьих лиц, а исключительно от своего имени и в собственных интересах.<br>
+                        3.4. Оформление Заказа осуществляется путем заполнения и отправки Продавцу формы с указанием
+                        параметров Заказа через сайт Интернет-магазина:<br>
+                     <ul>
+                        <li>Наименование, количество, стоимость Товара;</li>
+                        <li>Имя Покупателя;</li>
+                        <li>Контактный телефон Покупателя;</li>
+                        <li>Адрес электронной почты Покупателя;</li>
+                        <li>Вариант доставки.</li>
+                     </ul>
+                     3.5. Заказ считается совершенным после подтверждения Заказа по телефону или по почте, указанной в
+                     Заказе, Менеджером Продавца.<br>
+                     3.6. В случае, если у Продавца возникают основания предполагать, что предоставленная Покупателем
+                     при оформлении Заказа информация не соответствует действительности или предоставлена в неполном
+                     объеме, а также в случае оскорбительного и/или неадекватного поведения, ему может быть отказано в
+                     приеме Заказа на временной или постоянной основе.<br>
+                     3.7. Все поля Формы Заказа обязательны для заполнения Покупателем. Продавец не проверяет
+                     достоверность и актуальность данных, указанных Покупателем.<br>
+                     3.8. Покупатель не имеет право указывать в Форме заказа данные третьих лиц или заранее ложные
+                     данные.<br>
+                     3.9. До момента оформления Заказа и заключения настоящего Договора Покупатель обязуется
+                     ознакомиться:<br>
+                     <ul>
+                        <li>С основными потребительскими свойствами Товара, местом изготовления Товара, стоимостью
+                           Товара. Указанная информация расположена на странице Товара.</li>
+                        <li>Способы оплаты Товара. Указанная информация расположена на Сайте Интернет-магазина.</li>
+                        <li>Способы и стоимость Доставки товара. Указанная информация расположена на Сайте
+                           Интернет-магазина. Сроки доставки указаны ориентировочные и могут отличаться в большую или
+                           меньшую сторону, в зависимости от работы Курьерской компании, с которой у Продавца заключен
+                           договор на доставку Товаров Покупателю. Продавец оставляет за собой право не доставлять
+                           Покупателю Заказ в случае, если у Покупателя есть не оплаченные ранее Заказы.</li>
+                     </ul>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ХАРАКТЕРИСТИКИ ТОВАРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        4.1. Товар представлен в Интернет-магазине через фото-образцы, являющиеся собственностью
+                        Интернет-магазина.<br>
+                        4.2. Каждый фото-образец сопровождается текстовой информацией: наименованием, размером, ценой за
+                        единицу и описанием Товара.<br>
+                        4.3. Вся информация и характеристики Товара, представленные в Интернет-магазине, носят
+                        справочный характер и не могут в полной мере передавать информацию о свойствах и характеристиках
+                        Товара, включая цвета, размеры, материалы и формы. В случае возникновения у Покупателя вопросов,
+                        касающихся свойств и характеристик товара, Покупатель должен перед оформлением заказа обратиться
+                        к Продавцу по электронной почте или по телефону, указанным на сайте Интернет-магазина.<br>
+                        4.4. В связи с разными техническими характеристиками цвет Товара может отличаться от
+                        представленного в Интернет-магазине.<br>
+                        4.5. Характеристики и внешний вид Товара могут отличаться от представленных на сайте.<br>
+                        4.6. Позиция Товара «под Заказ» означает, что данного Товара нет в наличии у Продавца. Делая
+                        Заказ на Товар «под Заказ», Покупатель изъявляет Продавцу желание купить данный товар после его
+                        поступления к Продавцу. Продавец не гарантирует поступление Товара «под Заказ».<br>
+                        4.7. Продавец не несет ответственности за отсутствие Товара, размещенного на сайте
+                        Интернет-магазина. Покупатель должен самостоятельно уточнить наличие товара перед заказом или в
+                        момент согласования заказа с менеджером Продавца.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ЦЕНА ТОВАРА</div>
+                  <div class="policy__text-simple">
+                     <p>5.1. Цены в Интернет-магазине указаны в валюте Российской Федерации за единицу Товара.<br>
+                        5.2. Тарифы на оказание услуг по Доставке Товара размещены в Интернет-магазине и не включаются в
+                        цену Товара. Стоимость доставки оплачивается Покупателем отдельно и не подлежит возврату в
+                        случае возврата (обмена) Товара.<br>
+                        5.3. Указанная в Интернет-магазине цена Товара может быть изменена Продавцом в одностороннем
+                        порядке.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ОПЛАТА ТОВАРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        6.1. Покупатель оплачивает Товар способами, указанными в Интернет-магазине в разделе
+                        «Корзина».<br>
+                        6.2. При наличной форме оплаты Покупатель обязан уплатить Продавцу цену Товара в момент его
+                        передачи, а Продавец обязан предоставить Покупателю кассовый или товарный чек, или иной
+                        документ, подтверждающий оплату Товара.<br>
+                        6.3. При безналичной форме оплаты обязанность Покупателя по уплате цены Товара считается
+                        исполненной с момента зачисления соответствующих денежных средств в размере 100% (ста процентов)
+                        предоплаты на расчетный счет Продавца (Оператора по приему платежей).<br>
+                        6.4. При безналичной форме оплаты Продавец осуществляет Доставку (выдачу) Товара Покупателю
+                        только после поступления оплаты.<br>
+                        6.5. Просрочка уплаты Покупателем цены Товара на срок свыше 1 (одного) календарного дня с
+                        момента Заказа Товара является существенным нарушением настоящего договора. В этом случае
+                        Продавец вправе в одностороннем порядке отказаться от исполнения настоящего договора, уведомив
+                        об этом Покупателя.<br>
+                        6.6. Покупатель за свой счет оплачивает комиссии (сборы), взимаемые кредитными организациями
+                        (платежными системами), при осуществлении оплаты.<br>
+                        6.7. Покупатель должен уточнить наличие товара у Продавца до момента совершения оплаты.<br>
+                        6.8. Постановление Правительства от 1998 года № 55 предусматривает перечень товаров, которые не
+                        могут быть возвращены или заменены на основании ст. 25 Федерального закона от 1992 года №
+                        2300-1. Пункт 5 Постановления запрещает возврат и обмен бельевых и носочно-чулочных изделий.
+                        Возврат или обмен данных изделий осуществляется лишь в случае наличия производственного брака
+                        или несоответствия заявленному размеру.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ДОСТАВКА ТОВАРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        7.1. Доставка Товара Покупателю осуществляется по адресу и в сроки, согласованные Покупателем и
+                        менеджером Продавца при оформлении заказа.<br>
+                        7.2. Стоимость доставки каждого Заказа рассчитывается индивидуально и зависит от выбранного
+                        способа доставки.<br>
+                        7.3. Неявка Покупателя в течение 3-х рабочих дней, отказ от принятия доставки в оговоренный
+                        день, перенос доставки или несовершение иных необходимых действий для принятия Товара могут
+                        рассматриваться Продавцом в качестве отказа Покупателя от исполнения Договора.<br>
+                        7.3.1. При самовывозе неявка Покупателя в магазин в течение 10 рабочих дней будут
+                        рассматриваться Продавцом в качестве отказа Покупателя от исполнения Договора.<br>
+                        7.4. Право собственности и риск случайной гибели, утраты или повреждения товара переходит к
+                        Покупателю с момента передачи Товара Покупателю или его Представителю.<br>
+                        7.5. При доставке Товар вручается Покупателю или Представителю. Продавец не обязан проверять
+                        полномочия Представителя на прием Товара, если Представитель находится по адресу Доставки.<br>
+                        7.6. Покупатель обязан принять Товар по наименованию, количеству и ассортименту в момент его
+                        приемки.<br>
+                        7.7. Покупатель или Представитель Покупателя при приемке Товара подтверждает, что не имеет
+                        претензий к внешнему виду, наименованию, количеству и комплектности Товара, а также ознакомление
+                        с правилами возврата (обмена Товара).<br>
+                        7.8. После отправки Товара транспортной компанией Продавец, по запросу Покупателя, сообщает
+                        Покупателю данные транспортной компании и данные, необходимые для идентификации груза
+                        (товара).<br>
+                        7.9. Покупатель обязуется обеспечить приемку товара от транспортной компании. При приеме Товара
+                        от транспортной компании Покупатель обязан осмотреть Товар на предмет наличия и целостности
+                        упаковки. В случае повреждений упаковки и иных дефектов Покупатель обязан сделать
+                        соответствующие пометки в транспортных накладных. В противном случае последующие претензии о
+                        некомплектности или повреждении Товара при транспортировке не принимаются Продавцом.<br>
+                        7.10. Покупатель обязуется возместить Продавцу документально подтвержденные расходы, вызванные
+                        неприемом Товара от транспортной компании в назначенный день (в том числе услуги транспортной
+                        компании по ответственному хранению непринятого Товара, услуги транспортной компании по
+                        повторной доставке Товара).<br>
+                        7.11. В случае, если при приемке Товара от транспортной компании Покупатель отказывается от
+                        Товара, он обязан незамедлительно уведомить об этом Продавца по реквизитам, указанным в разделе
+                        15. В противном случае Продавец имеет право возложить на Покупателя возмещение расходов по
+                        ответственному хранению Товара транспортной компанией.<br>
+                        7.12. В случае отказа Покупателя от предоплаченного Товара, не в связи с нарушением условий о
+                        качестве Товара, Продавец удерживает в свою пользу расходы по доставке и возврату Товара, а
+                        также все понесенные разумные затраты и расходы (включая стоимость хранения), любые убытки,
+                        налоги и таможенные сборы из денежных средств, возвращаемых покупателю. Повторная отправка
+                        предоплаченного Товара Покупателю осуществляется после 100% (стопроцентной) оплаты расходов
+                        Продавца за доставку и возврат первого отправления.<br>
+                        7.14. Сроки доставки, указанные на сайте Интернет-магазина, являются ориентировочными и могут
+                        отличаться от фактических в большую или меньшую сторону.<br>
+                        7.15. Для Покупателей из стран дальнего зарубежья Продавец отправляет заказ без учета налогов и
+                        пошлин страны пребывания Покупателя. Цена за доставку не включает в себя налогов и пошлин.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ПРАВА И ОБЯЗАННОСТИ СТОРОН</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        8.1. Продавец обязуется:<br>
+                     <ul>
+                        <li>Не разглашать любые персональные данные Покупателя и не предоставлять доступ к этой
+                           информации третьим лицам, за исключением случаев, предусмотренных Российским
+                           законодательством, настоящим Договором и политикой в отношении обработки персональных данных.
+                        </li>
+                        <li>Предоставить Покупателю возможность получения бесплатных телефонных консультаций по
+                           телефонам, указанным на сайте Интернет-магазина. Объем консультаций ограничивается
+                           конкретными вопросами, связанными с выполнениями Заказа и характеристиками Товара.</li>
+                        <li>Продавец вправе отказать Покупателю в приеме и исполнении заказа, если Покупатель делал
+                           ранее заказ и не оплачивал его, отказывался от заказа в момент доставки Товара, не забирал
+                           Товар из пункта самовывоза, либо если у Продавца есть сомнения в достоверности указанных
+                           данных Покупателя, без объяснения причин.</li>
+                     </ul>
+                     8.2. Покупатель обязуется:<br>
+                     <ul>
+                        <li>До момента заключения Договора ознакомиться с содержанием настоящего Договора, условиями
+                           оплаты и доставки на сайте Интернет-магазина.</li>
+                        <li>Предоставлять достоверную информацию о себе (ФИО, контактные телефоны, адрес электронной
+                           почты) и реквизиты для доставки Товара.</li>
+                        <li>Принять и оплатить Товар в указанные в настоящем Договоре сроки.</li>
+                     </ul>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ОТВЕТСТВЕННОСТЬ СТОРОН И РАЗРЕШЕНИЕ СПОРОВ</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        9.1. Стороны несут ответственность за неисполнение или ненадлежащее исполнение настоящего
+                        Договора в порядке, предусмотренном настоящим Договором и действующим законодательством РФ.<br>
+                        9.2. Продавец не несет ответственности за доставку Заказа, если Покупателем указан неправильный
+                        адрес доставки или контактные данные.<br>
+                        9.3. Продавец не несет ответственности, если ожидания Покупателя о потребительских свойствах
+                        Товара оказались не оправданы.<br>
+                        9.4. Продавец не несет ответственности за расхождение в наличии товара на сайте
+                        Интернет-магазина и его фактическом наличии на складе Продавца.<br>
+                        9.5. Продавец обязан уведомить Покупателя о наличии товара в момент согласования заказа, в
+                        случае отсутствия товара предложить замену или уточнить примерные сроки поступления товара.<br>
+                        9.6. Все споры и разногласия, возникающие при исполнении Сторонами обязательств по настоящему
+                        Договору, решаются путем переговоров. В случае невозможности их устранения, Стороны имеют право
+                        обратиться за судебной защитой своих интересов.<br>
+                        9.7. Стороны установили необходимость соблюдения обязательного досудебного претензионного
+                        порядка до обращения в суд. Срок ответа на претензию устанавливается – 10 (десять) календарных
+                        дней с момента ее получения.<br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">ВОЗВРАТ И ОБМЕН ТОВАРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        10.1. Покупатель имеет право отказаться от Товара надлежащего качества, в случае, когда он не
+                        подошел по каким-либо причинам, в любое время до его передачи, а также после передачи, в течение
+                        7 (семи) дней, не считая дня его покупки.<br>
+                        10.2. Возврат товара надлежащего качества:<br>
+                     <ul>
+                        <li>В случае, если Покупатель хочет вернуть товар надлежащего качества, Продавец оставляет за
+                           собой право провести проверку сохранности товарного вида (в соответствии со статьей 25 Закона
+                           "О защите прав потребителей").</li>
+                        <li>При возврате товара надлежащего качества Продавец возвращает Покупателю полную стоимость
+                           товара, также Покупатель может заказать забор товара, оплатив расходы на доставку
+                           возвращенного товара (в соответствии с п. 4 статьи 26.1. Закона "О защите прав потребителей")
+                           или привезти товар самостоятельно.</li>
+                     </ul>
+
+
+                     10.2. Возврат товара ненадлежащего качества:<br>
+                     <ul>
+                        <li>В случае предъявления претензий к качеству товара Продавец оставляет за собой право провести
+                           проверку качества товара (в соответствии с п. 5 статьи 18 Закона "О защите прав
+                           потребителей").</li>
+                        <li>Возврат и замена товара ненадлежащего качества весом более 5 (пяти) килограммов
+                           осуществляется за счет Продавца (в соответствии с п. 7 статьи 18 Закона "О защите прав
+                           потребителей").</li>
+                     </ul>
+
+
+                     10.3. Для осуществления возврата Товара необходимо, чтобы:<br>
+                     <ul>
+                        <li>Товар не был в употреблении, были сохранены его потребительские свойства, товарный вид,
+                           упаковка, пломбы, ярлыки, а также товарный или кассовый чек, документация к товару.</li>
+                        <li>Товар являлся товаром надлежащего качества (исправен, не имеет повреждений, пятен, затяжек,
+                           следов и запахов, свидетельствующих об использовании товара, а также других визуальных
+                           повреждений, за исключением скрытых производственных дефектов).</li>
+                        <li>При наличии претензий к внешнему виду и комплектности товара Покупатель может отказаться от
+                           приобретения Товара до момента передачи Товара. Претензии к внешнему виду доставленного
+                           Товара Покупатель имеет право предъявить только до передачи Товара Продавцом. Ссылки на
+                           загрязнённость Товара, недостаточную освещённость помещения, ускорения со стороны
+                           экспедиторов Продавца и прочие причины, не являются основанием для невыполнения Покупателем
+                           своих обязательств.</li>
+                     </ul>
+
+
+
+                     10.4. Возврат денежных средств:<br>
+                     <ul>
+                        <li>В случае если оплата товара была произведена Покупателем наличными денежными средствами,
+                           возврат денежных средств осуществляется Продавцом на банковский счет Покупателя, который
+                           Покупатель укажет в бланке возврата. Бланк возврата Покупатель может получить путем
+                           направления запроса на возврат товара по телефону или адресу электронной почты Продавца,
+                           указанным в Интернет-магазине в разделе «Контакты;</li>
+                        <li>В случае если оплата товара была произведена Покупателем безналичным способом, возврат
+                           денежных средств осуществляется Продавцом на банковский счет Покупателя, с которого была
+                           произведена оплата такого товара.</li>
+                     </ul>
+                     </p>
+                  </div>
+
+                  <div class="policy__text-title">ФОРС-МАЖОРНЫЕ ОБСТОЯТЕЛЬСТВА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        11.1. Стороны освобождаются от ответственности за неисполнение или ненадлежащее исполнение
+                        обязательств по Договору на время действия непреодолимой силы. Под непреодолимой силой
+                        понимаются чрезвычайные и непреодолимые при данных условиях обстоятельства, препятствующие
+                        исполнению своих обязательств Сторонами по настоящему Договору. К ним относятся стихийные
+                        явления (землетрясения, наводнения и т. п.), обстоятельства общественной жизни (военные
+                        действия, чрезвычайные положения, крупнейшие забастовки, эпидемии и т. п.), запретительные меры
+                        государственных органов (запрещение перевозок, валютные ограничения, международные санкции
+                        запрета на торговлю и т. п.). В течение этого времени Стороны не имеют взаимных претензий, и
+                        каждая из Сторон принимает на себя свой риск последствия форс-мажорных обстоятельств. <br>
+                     </p>
+                  </div>
+                  <div class="policy__text-title">СРОК ДЕЙСТВИЯ ДОГОВОРА</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        12.1. Договор вступает в силу с момента Безусловного акцепта Покупателем и действует до
+                        исполнения обязательств Сторонами.<br>
+                     </p>
+                  </div>
+
+                  <div class="policy__text-title">СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ ПОКУПАТЕЛЯ</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        13.1. Оформляя Заказ на сайте Интернет-магазина, Покупатель подтверждает свое согласие на
+                        обработку Продавцом своих персональных данных и соглашается с «Политикой в отношении обработки
+                        персональных данных», размещенной в сети Интернет по адресу http://priesta.ru/. Политика
+                        обработки персональных данных является неотъемлемой частью настоящего Договора.<br>
+                        13.2. Перечень действий с Персональными данными, на совершение которых Покупателем дается
+                        согласие:<br>
+                     <ul>
+                        <li>Получение и Хранение Персональных данных (в электронном виде и на бумажном носителе);</li>
+                        <li>Уточнение (обновление, изменение) Персональных данных;</li>
+                        <li>Использование Персональных данных для исполнения настоящего Договора;</li>
+                        <li>Передача Персональных данных Покупателя в порядке, предусмотренном законодательством РФ;
+                        </li>
+                        <li>В целях рассылки каталогов, в маркетинговых и в иных коммерческих целях. Пользователь вправе
+                           отказаться от получения подобных сообщений, следуя по ссылке для отмены подписки, или
+                           инструкциям, указанным Продавцом при получении соответствующего запроса;</li>
+                        <li>Для осуществления связи с Пользователем, в том числе направление уведомлений, запросов, и
+                           информации, касающихся использования Сайта, исполнения соглашений и договоров, а также
+                           обработка заказов и запросов Пользователя.</li>
+                        <li>На передачу Персональных данных любым третьим лицам на территории Российской Федерации в
+                           целях исполнения настоящего Договора.</li>
+                        <li>Проведение статистических и иных исследований на основе обезличенных данных.</li>
+                        <li>Улучшение качества сайта и услуг, предоставляемых Продавцом.</li>
+                     </ul>
+                     13.4. Согласие Покупателя на обработку персональных данных предоставляется без ограничения срока
+                     его действия.<br>
+                     13.5. Покупатель, исключительно по личному заявлению, имеет право отозвать (изменить) настоящее
+                     согласие на обработку Персональных данных.<br>
+                     13.6. Продавец обрабатывает и обеспечивает конфиденциальность Персональных данных в соответствии с
+                     требованиями действующего законодательства РФ и Общего регламента по защите данных Европейского
+                     союза.<br>
+                     </p>
+                  </div>
+
+                  <div class="policy__text-title">ИНЫЕ ПОЛОЖЕНИЯ</div>
+                  <div class="policy__text-simple">
+                     <p>
+                        14.1. Покупатель понимает и принимает условия о том, что информация, характеристики Товара, в
+                        связи с временно возникающими техническими ошибками на Сайте Интернет-магазина могут искажаться
+                        (характеристики, наличие, комплектность и цена). Продавец оставляет за собой право изменять
+                        информацию. В случае возникновения технической ошибки на Сайте Интернет-магазина, не зависящей
+                        от Продавца, в том случае, если данный факт будет доказан, Покупатель оставляет за собой право
+                        возвратить Товар.<br>
+                        14.2. Стороны осуществляют взаимодействие по реквизитам:<br>
+                     <ul>
+                        <li>Для Продавца – указанным в п. 15. Настоящего Договора;</li>
+                        <li>Для Покупателя – указанным при осуществлении Заказа.</li>
+                     </ul>
+                     </p>
+                  </div>
+
+                  <div class="policy__text-title">РЕКВИЗИТЫ ПРОДАВЦА</div>
+                  <div class="policy__text-simple flex-text">
+                     <p><span>Наименование:</span>ИП Смирнов Станислав Андреевич</p>
+                     <p><span>Адрес регистрации:</span>195279, г. Санкт-Петербург, пр-кт Индустриальный, дом 40, корпус
+                        1, кв 171</p>
+                     <p><span>Адрес для корреспонденции / фактический адрес:</span>195279, г. Санкт-Петербург, пр-кт
+                        Индустриальный, дом 40, корпус 1, кв 171</p>
+                     <p><span>ИНН:</span>783901190472</p>
+                     <p><span>ОГРНИП:</span>319784700197411</p>
+                     <p><span>Банк:</span>ООО "Банк Точка"</p>
+                     <p><span>БИК:</span>044525104</p>
+                     <p><span>Расчетный счет:</span>40802810401500148083</p>
+                     <p><span>Корреспондентский счет:</span>30101810745374525104</p>
+                     <p><span>Электронная почта:</span>info@priesta.ru</p>
+                     <p><span>Контактный телефон:</span>8 (917) 413-13-13</p>
+                  </div>
+
+
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+   <div class="footer__body">
+      <div class="footer__left">
+         <div class="footer__languages">
+            <a href="">English version</a>
+         </div>
+         <div class="main-footer__logo">
+            <a href="index.html">
+               <svg xmlns="http://www.w3.org/2000/svg" width="99" height="30" viewBox="0 0 99 30">
+                  <use xlink:href="svgicons/sprite.svg#logo"></use>
+               </svg>
+            </a>
+         </div>
+      </div>
+      <div class="footer__main main-footer">
+
+         <div class="main-footer__menu">
+            <nav class="main-footer__links">
+               <div class="main-footer__column">
+                  <a href="about.html" class="main-footer__link">About the brand</a>
+                  <a href="" class="main-footer__link">Instagram</a>
+                  <a href="" class="main-footer__link">Магазины</a>
+                  <a href="contacts.html" class="main-footer__link">Контакты</a>
+               </div>
+               <div class="main-footer__column">
+                  <a href="pay.html" class="main-footer__link">Оплата</a>
+                  <a href="delivery.html" class="main-footer__link">Доставка</a>
+                  <a href="return-rules.html" class="main-footer__link">Правила возврата</a>
+                  <a href="return-form.html" class="main-footer__link">Форма возврата</a>
+               </div>
+               <div class="main-footer__column">
+                  <a href="" class="main-footer__link">Оферта</a>
+                  <a href="" class="main-footer__link">Пользовательское соглашение</a>
+                  <a href="policy.html" class="main-footer__link">Политика обработки персональных данных</a>
+               </div>
+            </nav>
+            <div class="main-footer__policy">© 2024 PRIESTA | Все права защищены</div>
+         </div>
+         <div class="main-footer__subscribe subscribe">
+            <div class="subscribe__title">Подписывайтесь на наши новости</div>
+            <form action="" class="subscribe__form">
+               <input type="mail" class="input" placeholder="ВАШ EMAIL">
+               <button type="submit">
+                  <svg width="28" height="14" viewBox="0 0 28 14" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <use xlink:href="svgicons/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </form>
+            <div class="checkbox-container">
+               <input type="checkbox" id="policyCheckbox2" checked>
+               <label for="policyCheckbox2" class="popup__checkbox"></label>
+               <label for="policyCheckbox2">Нажимая на кнопку “Продолжить” вы соглашаетесь с <a
+                     href="policy.html">Политикой
+                     обработки персональных данных</a>
+               </label>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+   </div>
+   <script src="js/app.js?_v=20240331145827"></script>
+</body>
+
+</html>
